@@ -13,6 +13,10 @@
         display: none;
     }
 
+    #first-section {
+        padding-top: 0;
+    }
+
     #reverse-mobile {
         flex-direction: column;
     }
@@ -45,6 +49,45 @@
         max-width: 100%;
         min-height: fit-content;
         background-size: cover;
-        padding: 60vh 1rem 10vh 1rem;
+        padding: 70vh 1rem 10vh 1rem;
+    }
+
+    .testimonials-control {
+        flex-direction: column;
+    }
+
+    footer {
+        overflow: auto;
+    }
+
+    .inner-footer {
+        bottom: 0;
+    }
+
+    .image-control {
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
+    .footer-img {
+        width: 50%;
+        aspect-ratio: 1/1;
+        height: auto;
+    }
+
+    #milkbottles {
+        background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+    }
+    
+    #orange {
+        background-image: url(./images/mobile/image-gallery-orange.jpg);
+    }
+    
+    #cone {
+        background-image: url(./images/mobile/image-gallery-cone.jpg);
+    }
+    
+    #sugarcubes {
+        background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
     }
 }
