@@ -1,0 +1,50 @@
+@media screen and (max-width: 500px) {
+
+    header {
+        background-image: url(./images/mobile/image-header.jpg);
+    }
+
+    .title-container h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    ul {
+        display: none;
+    }
+
+    #reverse-mobile {
+        flex-direction: column;
+    }
+
+    .double-box {
+        width: 100%;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .double-box img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .text-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #design {
+        background-image: url(./images/mobile/image-graphic-design.jpg);
+    }
+
+    #photography {
+        background-image: url(./images/mobile/image-photography.jpg);
+    }
+
+    #design, #photography {
+        max-width: 100%;
+        min-height: fit-content;
+        background-size: cover;
+        padding: 60vh 1rem 10vh 1rem;
+    }
+}

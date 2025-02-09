@@ -1,3 +1,19 @@
+:root {  
+--soft-red: hsl(7, 99%, 70%);
+--yellow: hsl(51, 100%, 49%);
+--dark-desaturated-cyan: hsl(167, 40%, 24%);
+--dark-blue: hsl(198, 62%, 26%);
+--dark-moderate-cyan: #458c7e;
+--very-dark-desaturated-blue: hsl(212, 27%, 19%);
+--very-dark-grayish-blue: hsl(213, 9%, 39%);
+--dark-grayish-blue: hsl(232, 10%, 55%);
+--grayish-blue: hsl(210, 4%, 67%);
+--white: hsl(0, 0%, 100%);
+--navbar-bg: #3dbeff;
+--footer-bg: hsla(168, 34%, 41%, 0.7);
+--footer-text: #2c7566;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +21,9 @@
     font-family: "Barlow", serif;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
+    transition: 0.5s;
 }
 
 a {
@@ -32,25 +47,51 @@ header {
     background-image: url(./images/desktop/image-header.jpg);
     background-size: cover;
     background-position: center;
-    padding: 1rem 5%;
-    color: #fff;
-    position: relative;
+    padding: 0 5%;
+    color: var(--white);
+    position: fixed;
+    z-index: 1;
+    transition: 1s;
 }
 
-nav {
+header nav {
+    background-color: var(--navbar-bg);
+    width: 100%;
     display:  flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 10vh;
 }
 
-nav ul {
+ul {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-nav ul a {
-    color: white;
+header nav ul a {
+    color: var(--white);
+}
+
+#contact-btn {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-radius: 1.2rem;
+    font-weight: bolder;
+    font-family: "Fraunces", serif;
+    transition: 0.5s;
+}
+
+#contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+#first-section {
+    padding-top: 10vh;
 }
 
 .title-container {
@@ -78,6 +119,7 @@ nav ul a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--dark-desaturated-cyan);
 }
 
 .double-box img {
@@ -117,11 +159,11 @@ nav ul a {
     align-items: center;
     min-height: 600px;
     padding-top: 15%;
+   color: var(--dark-blue);
 }
 
 #design p, #photography p {
    text-align: center;
-   opacity: 0.7;
 }
 
 #design h2, #photography h2 {
@@ -148,6 +190,13 @@ nav ul a {
     padding: 10% 5%;
 }
 
+.testimonials-container h3 {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+}
+
 .testimonials-control {
     display: flex;
 }
@@ -160,6 +209,11 @@ nav ul a {
     gap: 10vh;
     margin: 2rem;
     text-align: center;
+    line-height: 170%;
+}
+
+.testimonial-box span {
+    font-weight: bolder;
 }
 
 .testimonial-box img {
@@ -167,31 +221,138 @@ nav ul a {
     border-radius: 50%;
 }
 
+.image-control {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+footer {
+    overflow: hidden;
+    position: relative;
+}
+
+.inner-footer {
+    position: relative;
+    bottom: -30vh;
+}
+
+.footer-img {
+    width: 100%;
+    height: 70vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#milkbottles {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+}
+
+#orange {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+}
+
+#cone {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+}
+
+#sugarcubes {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+}
+
+#footer-nav {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--footer-bg);
+}
+
+footer a {
+    color: var(--footer-text);
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+.footer-logo:hover {
+    fill: var(--white)
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socials-icons {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.socials-icons ,
+.socials-path:hover {
+    transition: 0.5s;
+    fill: var(--white);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding-bottom: 1rem;
+    letter-spacing: 0.1rem;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--white);
+    text-decoration: none;
 }
 
-@keyframes screenDown {
-    from {
-        height: 100vh;
-    }
+.header-up {
+    animation: screenUp 1s;
+    height: 10vh;
+}
 
-    to {
-        height: 10vh;
-    }
+.footer-up {
+    animation: footerUp 0.8s;
+    bottom: 0;
 }
 
 @keyframes screenUp {
     from {
-        height: 10vh;
+        height: 100vh;
     }
 
     to {
-        height: 100vh;
+        height: 10vh;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes footerUp {
+    from {
+        bottom: -30vh;
+    }
+
+    to {
+        bottom: 0;
     }
 }
