@@ -45,13 +45,16 @@ function scrollEffect() {
     })
 }
 
-console.log()
 
 if (window.innerWidth > 500) {
     scrollEffect()
 } else {
     header.style.position = "unset"
 }
+
+document.querySelector(".mobile-menu").addEventListener("click" , () => {
+    document.querySelector("ul").classList.toggle("active-menu")
+})
 
 
 

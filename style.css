@@ -63,6 +63,10 @@ header nav {
     min-height: 10vh;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 ul {
     display: flex;
     list-style: none;
