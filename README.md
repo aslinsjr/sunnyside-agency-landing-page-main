@@ -23,8 +23,8 @@ Frontend Mentor challenges help improve my coding skills by building realistic p
 
 ### Links
 
-- Solution URL: [Repository](https://your-solution-url.com)
-- Live Site URL: [Page](https://your-live-site-url.com)
+- Solution URL: [Repository](https://github.com/aslinsjr/sunnyside-agency-landing-page-main)
+- Live Site URL: [Page](https://aslinsjr.github.io/sunnyside-agency-landing-page-main/)
 
 ## My process
 
